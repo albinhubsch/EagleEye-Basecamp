@@ -3,10 +3,11 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "test": "npm run prepublish && node dist/EagleEye-Basecamp.js",
+        "test": "npm run prepublish && node build/EagleEye-Basecamp.js",
         "postversion": "git push && git push --tags",
-        "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir dist",
-        "prepublish": "npm run build:commonjs"
+        "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir build",
+        "prepublish": "npm run build:commonjs",
+        "build": "npm run build:commonjs"
     },
     "repository": "git@github.com:albinhubsch/EagleEye-Basecamp.git",
     "author": "Albin Hübsch <albin.hubsch@gmail.com>",
