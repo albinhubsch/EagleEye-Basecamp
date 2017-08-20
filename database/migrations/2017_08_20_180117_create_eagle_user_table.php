@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEaglesTable extends Migration
+class CreateEagleUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateEaglesTable extends Migration
      */
     public function up()
     {
-        Schema::create('eagles', function (Blueprint $table) {
+        Schema::create('eagle_user', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->default('EagleEye');
-            $table->string('description');
-            $table->string('placement');
-            $table->enum('state', ['armed', 'disarmed', 'stanby', 'off'])->default('disarmed');
+            $table->integer('eagle_id');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateEaglesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eagles');
+        Schema::dropIfExists('eagle_user');
     }
 }
