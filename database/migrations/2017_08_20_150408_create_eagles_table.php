@@ -18,7 +18,7 @@ class CreateEaglesTable extends Migration
             $table->string('name')->default('EagleEye');
             $table->string('description');
             $table->string('placement');
-            $table->enum('state', ['armed', 'disarmed', 'stanby', 'off'])->default('disarmed');
+            $table->enum('state', ['armed', 'disarmed', 'standby', 'off'])->default('disarmed');
             $table->timestamps();
         });
     }
