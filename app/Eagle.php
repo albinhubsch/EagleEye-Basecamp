@@ -12,7 +12,7 @@ class Eagle extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'placement', 'state'
+        'id', 'name', 'description', 'placement', 'state'
     ];
 
     public function users(){
