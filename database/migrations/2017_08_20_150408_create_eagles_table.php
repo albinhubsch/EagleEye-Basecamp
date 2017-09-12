@@ -14,7 +14,7 @@ class CreateEaglesTable extends Migration
     public function up()
     {
         Schema::create('eagles', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id');
             $table->string('name')->default('EagleEye');
             $table->string('description');
             $table->string('placement');

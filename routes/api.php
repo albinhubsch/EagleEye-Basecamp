@@ -16,6 +16,9 @@ $api->version('v1', function (Router $api) {
 
     $api->group(['middleware' => 'jwt.auth'], function(Router $api) {
 
+        // TODO:
+        // Setup UUID for eagle and events in DB and fix relations
+
         // Return a list of events
         // $api->get('eagle/{eagle_id}/events', 'App\Api\V1\Controllers\SignUpController@signUp');
 
